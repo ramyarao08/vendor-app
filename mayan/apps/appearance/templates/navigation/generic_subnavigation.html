@@ -1,0 +1,46 @@
+{% load common_tags %}
+{% load navigation_tags %}
+<!--Comment::
+        *****************************************************
+        Date    ==>>20/11/2017 
+        Authour ===>Robot
+        Details ===>Implement the Customization for Vendor APP
+                    Hide the navigation menu options
+        ******************************************************
+-->
+{% if link|get_type == "<class 'navigation.classes.Menu'>" %}
+   {% if link.label == "Documents" or link.label == "User" %}
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+            {% if link.icon %}
+            <i class="hidden-xs hidden-sm hidden-md {{ link.icon }}"></i>
+            {% endif %}
+
+            {{ link.label }}
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            {% get_menu_links link.name as menu_links %}
+            {% for linkset in menu_links %}
+                {% with '' as li_class_active %}
+                {% with linkset as object_navigation_links %}
+                    {% include 'navigation/generic_navigation.html' %}
+                {% endwith %}
+                {% endwith %}
+            {% endfor %}
+        </ul>
+    </li>
+
+{% endif %}
+{% else %}
+ 
+    {% if as_li %}
+        <li class="{% if link.active and li_class_active %}{{ li_class_active }}{% endif %}">
+    {% endif %}
+
+       {% include link_template|default:'navigation/generic_link_instance.html' %}
+
+    {% if as_li %}
+        </li>
+    {% endif %}
+{% endif %}

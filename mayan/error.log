@@ -1,0 +1,258 @@
+2017-10-11 15:27:51,475 common.middleware.error_logging <16236> [ERROR] "process_exception() line 17 Exception caught by request middleware; <WSGIRequest: GET '/authentication/login/?next=/'>, no such table: django_site"
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/selva/Desktop/personal/support_loadrunner/mayan-edms/mayan/apps/authentication/views.py", line 40, in login_view
+    result = login(request, extra_context=extra_context, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/views.py", line 47, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/views.py", line 87, in login
+    current_site = get_current_site(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/shortcuts.py", line 15, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 65, in get_current
+    return self._get_site_by_id(site_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 35, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 379, in get
+    num = len(clone)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1087, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 835, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: django_site
+2017-10-11 15:27:52,440 common.middleware.error_logging <16236> [ERROR] "process_exception() line 17 Exception caught by request middleware; <WSGIRequest: GET '/authentication/login/?next=/favicon.ico'>, no such table: django_site"
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/selva/Desktop/personal/support_loadrunner/mayan-edms/mayan/apps/authentication/views.py", line 40, in login_view
+    result = login(request, extra_context=extra_context, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/views.py", line 47, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/views.py", line 87, in login
+    current_site = get_current_site(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/shortcuts.py", line 15, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 65, in get_current
+    return self._get_site_by_id(site_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 35, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 379, in get
+    num = len(clone)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1087, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 835, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: django_site
+2017-10-12 15:12:02,025 common.middleware.error_logging <23148> [ERROR] "process_exception() line 17 Exception caught by request middleware; <WSGIRequest: GET '/authentication/login/?next=/'>, no such table: django_site"
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/selva/Desktop/personal/support_loadrunner/mayan-edms/mayan/apps/authentication/views.py", line 40, in login_view
+    result = login(request, extra_context=extra_context, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/views.py", line 47, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/views.py", line 87, in login
+    current_site = get_current_site(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/shortcuts.py", line 15, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 65, in get_current
+    return self._get_site_by_id(site_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 35, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 379, in get
+    num = len(clone)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1087, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 835, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: django_site
+2017-10-12 15:12:03,273 common.middleware.error_logging <23148> [ERROR] "process_exception() line 17 Exception caught by request middleware; <WSGIRequest: GET '/authentication/login/?next=/favicon.ico'>, no such table: django_site"
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/selva/Desktop/personal/support_loadrunner/mayan-edms/mayan/apps/authentication/views.py", line 40, in login_view
+    result = login(request, extra_context=extra_context, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/views.py", line 47, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/views.py", line 87, in login
+    current_site = get_current_site(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/shortcuts.py", line 15, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 65, in get_current
+    return self._get_site_by_id(site_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 35, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 379, in get
+    num = len(clone)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1087, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 835, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: django_site
+2017-10-12 15:12:17,768 common.middleware.error_logging <23148> [ERROR] "process_exception() line 17 Exception caught by request middleware; <WSGIRequest: GET '/authentication/login/?next=/'>, no such table: django_site"
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/selva/Desktop/personal/support_loadrunner/mayan-edms/mayan/apps/authentication/views.py", line 40, in login_view
+    result = login(request, extra_context=extra_context, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/views.py", line 47, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/views.py", line 87, in login
+    current_site = get_current_site(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/shortcuts.py", line 15, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 65, in get_current
+    return self._get_site_by_id(site_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 35, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 379, in get
+    num = len(clone)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1087, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 835, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: django_site
+2017-10-12 15:12:19,029 common.middleware.error_logging <23148> [ERROR] "process_exception() line 17 Exception caught by request middleware; <WSGIRequest: GET '/authentication/login/?next=/favicon.ico'>, no such table: django_site"
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/selva/Desktop/personal/support_loadrunner/mayan-edms/mayan/apps/authentication/views.py", line 40, in login_view
+    result = login(request, extra_context=extra_context, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/views.py", line 47, in inner
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/views.py", line 87, in login
+    current_site = get_current_site(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/shortcuts.py", line 15, in get_current_site
+    return Site.objects.get_current(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 65, in get_current
+    return self._get_site_by_id(site_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/sites/models.py", line 35, in _get_site_by_id
+    site = self.get(pk=site_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 379, in get
+    num = len(clone)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1087, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 835, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: django_site
